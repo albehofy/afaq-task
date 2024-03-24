@@ -1,0 +1,83 @@
+
+<div class="d-flex justify-content-center">
+    <button class="btn text-primary"  (click)="showDialog();"><i class="pi pi-eye"></i></button>
+    <button class="btn text-info" (click)="editDialog();"><i class="pi pi-file-edit"></i></button>
+    <button class="btn text-danger" (click)="deleteDialog();"><i class="pi pi-trash"></i></button>
+
+    <p-dialog  header="User Details" [(visible)]="show" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        <img src="" alt="">
+        <div class="float-end"> 
+            <button class="btn text-info" (click)="editDialog();show= false"><i class="pi pi-file-edit"></i></button>
+            <button class="btn text-danger" (click)="deleteDialog();show= false"><i class="pi pi-trash"></i></button>
+        </div>
+        <div class="text-center">
+            <img class="ms-5 rounded rounded-circle mb-4" width="160px" height="160px" src="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" alt="user avatar">
+        </div>
+        <form>
+            <div class="row container-fluid align-items-center justify-content-around flex-wrap mb-3">
+                <label for="fullName" class="form-label flex-grow-1 text-capitalize">full name
+
+                    <input type="text" readonly id="fullName" class="form-control mx-auto my-2">
+                </label>
+
+                <label for="userName" class="form-label flex-grow-1 text-capitalize">user name    
+                    <input type="text" readonly id="userName" class="form-control mx-auto my-2">
+                </label>
+            </div>
+            <div class="row container-fluid align-items-center justify-content-around flex-wrap mb-3">
+                <label for="email" class="form-label flex-grow-1 text-capitalize">email
+
+                    <input type="email" readonly  id="email" class="form-control mx-auto my-2">
+                </label>
+
+                <label for="password" class="form-label flex-grow-1 text-capitalize">password    
+                    <input type="password" readonly id="password" class="form-control mx-auto my-2">
+                </label>
+            </div>
+        </form>
+    </p-dialog>
+
+    <p-dialog  header="Edit User" [(visible)]="edit" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        
+
+        <form>
+            <div class="float-start">
+                <img src="./assets/iamges/avatar.png" alt="">
+                <label for="avatar" style="width: 120px;overflow: hidden;" class="mx-3">
+                    <div class="border" style="width:120px;padding-top:11px; text-align:center">
+                        upload image
+                        <input type="file" name="avatar" id="avatar" accept="png,jpg" style="opacity: 0;">
+                    </div>
+                    At least 256*256 px PNG or JPG file.
+                </label>
+            </div>
+            <div class="row container-fluid align-items-center justify-content-around flex-wrap mb-3">
+                <label for="fullName" class="form-label text-capitalize">full name
+
+                    <input type="text"  id="fullName" class="form-control mx-auto my-2">
+                </label>
+
+                <label for="userName" class="form-label text-capitalize">user name    
+                    <input type="text" id="userName" class="form-control mx-auto my-2">
+                </label>
+            </div>
+            <div class="row container-fluid align-items-center justify-content-around flex-wrap mb-3">
+                <label for="email" class="form-label text-capitalize">email
+
+                    <input type="email"  id="email" class="form-control mx-auto my-2">
+                </label>
+
+                <label for="password" class="form-label text-capitalize">password    
+                    <input type="password" id="password" class="form-control mx-auto my-2">
+                </label>
+            </div>
+
+            <button class="btn btn-dark d-inline-block px-3 btn-lg mx-auto">save changes</button>
+        </form>
+    </p-dialog>
+
+    <p-dialog  header="Delete User" [(visible)]="del" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+       <h2 class="text-warning text-center p-5">are you sure you need to delete this's user</h2>
+       <button class="w-25 btn btn-warning px-3 btn-lg d-block mx-auto">حذف</button>
+    </p-dialog>
+</div>

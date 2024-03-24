@@ -1,0 +1,48 @@
+.header h2 {
+    font-size: 60px;
+    font-family: Popians;
+    width: calc(100% - 121px);
+}
+
+.header h2 span {
+    line-height: 73.14px;
+}
+
+.header h2 span:first-of-type {
+    color: #136456 !important;
+}
+
+.header h2 span:last-of-type {
+    background: rgba(239, 180, 56, 0.5);
+    position: relative;
+}
+
+.header h2 span:last-of-type::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(213, 233, 251, 1);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 50%;
+}
+
+.header h2 span:last-of-type::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 121px solid #efb43880;;
+}
+
+form button[type='submit'] {
+    width: 250px;
+    font-size: 18px;
+}

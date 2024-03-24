@@ -1,0 +1,16 @@
+<div class="header pt-5 mt-5">
+    <!-- <h2 class="text-capitalize text-dark d-flex"><span class="d-block py-4">miso</span><span class="d-block py-4 text-start flex-grow-1">whey</span></h2> -->
+    <img src="./assets/images/logo.png" class="img-fluid" alt="misowhey"/>
+</div>
+<form [formGroup]="loginForm" class="mx-auto my-5">
+    <div class="mb-3">
+        <label for="email" class="form-label text-capitalize">email address</label>
+        <input type="email" formControlName="email" class="form-control form-control-lg fs-6" placeholder="hallo@gmail.com">
+    </div>
+    <div class="mb-5">
+        <label for="password" class="form-label text-capitalize">password</label>
+        <input type="password" formControlName="password" class="form-control form-control-lg fs-6" name="password" id="password" placeholder="Your Pasword"/>
+    </div>
+    <button type="submit" (click)="login()" class="btn btn-lg btn-dark rounded-4 mx-auto py-2 d-block mt-2"> Sign in </button>
+    
+</form>

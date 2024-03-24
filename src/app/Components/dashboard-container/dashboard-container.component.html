@@ -1,0 +1,23 @@
+<nav class="bg-white py-2 d-flex justify-content-between">
+    <img src="./assets/images/logo.png" class="img-fluid logo" alt="misowhey"/>
+    <div class="user-data border fw-semibold border-2 px-3 border-bottom-0 border-end-0 border-top-0 border-warning">
+        <img src="https://scontent.fcai19-5.fna.fbcdn.net/v/t39.30808-6/417577514_298148129966854_8220368977268909937_n.jpg?stp=dst-jpg_s600x600&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=W3sApRYq0WYAX9LSgdo&_nc_ht=scontent.fcai19-5.fna&oh=00_AfBBysG3AwnO6578zcPm6RTN5aUWSVjLz6B0OCK-oocmgg&oe=66038730" class="img-fluid user rounded rounded-circle" alt="misowhey"/>
+        <span class="text-capitalize mx-3">sami ali</span>
+        <i class="bi bi-chevron-down text-warning"></i>
+    </div>
+</nav>
+<div class="bg-light py-4">
+    <div class="d-flex justify-content-around container-fluid mx-auto my-3">
+        
+        <div class="dashboard-holder">
+            <div class="shadow fw-semibold h-100 p-2 bg-white rounded">
+                <a routerLink="location" routerLinkActive="active" class="d-block px-3 py-1 lh-lg text-capitalize text-black text-decoration-none fs-6 rounded rounded-4 w-100"><i class=" pi pi-chart-bar"></i> dashboard</a>
+                <br>
+                <a routerLink="users" routerLinkActive="active" class="d-block px-3 py-1 lh-lg text-capitalize text-black text-decoration-none fs-6 rounded rounded-4 active w-100"><i class=" pi pi-users"></i> users</a>
+            </div>
+        </div>
+        <div class="users-data">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
